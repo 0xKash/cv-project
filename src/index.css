@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  --main-background-color: #242424;
+  --secundary-color: #3d3d3d;
+  --font-color: rgb(255, 255, 255);
+  --cv-font-color: black;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+p {
+  color: var(--cv-font-color);
+}
+
+hr {
+  min-height: 1cm;
+}
+
+:root {
+  background-color: var(--main-background-color);
+  color: var(--font-color);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+#delete-button-wrapper {
+  background-color: var(--secundary-color);
+  width: 30vw;
+  height: 8vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+#delete-button {
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+
+  padding: 0.5rem;
+  border-radius: 10px;
+
+  font-size: 1em;
+  font-weight: bold;
+
+  color: #9d2727;
+}
+
+#delete-svg {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+#delete-button:hover {
+  cursor: pointer;
+}
+
+#personal-details {
+  height: 30vh;
+}
+
+.input-section {
+  background-color: var(--secundary-color);
+  box-sizing: border-box;
+
+  width: 30vw;
+  height: 10vh;
+  margin: 1rem;
+  border-radius: 10px;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+#input-wrapper > h2 {
+  color: var(--font-color);
+}
+
+#cv-application {
+  width: 21cm;
+  height: 29.7cm;
+  margin: 1rem;
+
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+#cv-topbar {
+  box-sizing: border-box;
+  height: 5cm;
+  padding: 1rem;
+  background-color: var(--secundary-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#cv-topbar > h1 {
+  font-size: 3rem;
+}
+
+#topbar-info-wrapper {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+#titles-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cv-title {
+  width: 85%;
+  height: 1cm;
+  margin-top: 1cm;
+  margin-bottom: 0.3cm;
+
+  padding: 0.3rem;
+  background-color: var(--secundary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-content,
+.work-content {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 1em;
+  width: 80%;
+
+  margin-bottom: 0.6rem;
+
+  border: 1px solid red;
+}
+
+.period-wrapper {
+  display: flex;
+  gap: 0.3rem;
+  width: 3.5cm;
+}

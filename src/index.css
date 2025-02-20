@@ -18,6 +18,10 @@ hr {
   min-height: 1cm;
 }
 
+section > h2 {
+  color: var(--font-color);
+}
+
 :root {
   background-color: var(--main-background-color);
   color: var(--font-color);
@@ -26,6 +30,8 @@ hr {
 #root {
   display: flex;
   justify-content: center;
+
+  width: 100vw;
 }
 
 #delete-button-wrapper {
@@ -59,17 +65,8 @@ hr {
   color: #9d2727;
 }
 
-#delete-svg {
-  width: 1.3em;
-  height: 1.3em;
-}
-
 #delete-button:hover {
   cursor: pointer;
-}
-
-#personal-details {
-  height: 30vh;
 }
 
 .input-section {
@@ -77,12 +74,49 @@ hr {
   box-sizing: border-box;
 
   width: 30vw;
-  height: 10vh;
   margin: 1rem;
   border-radius: 10px;
 
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
   padding: 1rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dropdown-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.dropdown-section > svg {
+  transform: translateY(20%);
+  width: 1.5em;
+  height: 1.5em;
+}
+
+label {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+input {
+  background-color: var(--main-background-color);
+  border-radius: 10px;
+  border: none;
+  height: 2rem;
+  outline: none;
+  padding-left: 0.5rem;
+
+  color: var(--font-color);
 }
 
 #input-wrapper > h2 {
@@ -158,4 +192,26 @@ hr {
   display: flex;
   gap: 0.3rem;
   width: 3.5cm;
+}
+
+@media (max-width: 502px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+  }
+
+  #delete-button-wrapper,
+  #personal-details,
+  .dropdown-section,
+  #cv-application {
+    width: 100vw;
+  }
+
+  #delete-button-wrapper {
+    height: 5vh;
+  }
 }

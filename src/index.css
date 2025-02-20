@@ -196,19 +196,17 @@ input {
 
 @media (max-width: 502px) {
   #root {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    padding: 1rem;
   }
 
   #delete-button-wrapper,
   #personal-details,
   .dropdown-section,
   #cv-application {
-    width: 100vw;
+    width: auto;
   }
 
   #delete-button-wrapper {

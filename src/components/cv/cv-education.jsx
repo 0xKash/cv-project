@@ -1,20 +1,20 @@
-export function CVEducation() {
+export function CVEducation({ school, degree, start, end, location }) {
   return (
     <div className="cv-content">
       <div>
         <div className="period-wrapper">
-          <p>08/2020</p>
+          <p>{start}</p>
           <p>-</p>
-          <p>present</p>
+          <p>{end}</p>
         </div>
-        <p>New York City, US</p>
+        <p>{location}</p>
       </div>
       <hr />
       <div>
         <p>
-          <b>London City University</b>
+          <b>{school}</b>
         </p>
-        <p>Bachelors in Economics</p>
+        <p>{degree}</p>
       </div>
     </div>
   );

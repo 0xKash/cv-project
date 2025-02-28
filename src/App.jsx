@@ -1,8 +1,12 @@
 import "./index.css";
 
+// COMPONENTS
+
 import { PersonalDetails } from "./pages/personal-details";
 import { Education } from "./pages/education";
 import { CVDocument } from "./pages/cv";
+
+// HOOKS
 
 import { usefullName } from "./hooks/personal-details/fullnameHook";
 import { useEmail } from "./hooks/personal-details/emailHook";
@@ -14,8 +18,6 @@ import { useDegree } from "./hooks/education/degreeHook";
 import { useDate } from "./hooks/education/dateHook";
 import { useLocation } from "./hooks/education/locationHook";
 import { useAcademic } from "./hooks/education/academicHook";
-
-import { CreateWidget } from "./components/common/createWidget";
 
 // ================================================================================ //
 
@@ -56,6 +58,18 @@ function App() {
           handleStart={handleStart}
           handleEnd={handleEnd}
           handleLocation={handleLocation}
+          pushArr={() => {
+            setAcademic([
+              ...academic,
+              {
+                school: school,
+                degree: degree,
+                start: start,
+                end: end,
+                location: location,
+              },
+            ]);
+          }}
         />
       </div>
       <CVDocument
@@ -63,6 +77,7 @@ function App() {
         email={email}
         phoneNumber={phoneNumber}
         address={address}
+        education={academic}
       />
     </>
   );

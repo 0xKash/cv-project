@@ -1,18 +1,17 @@
 import { useAcademic } from "../../hooks/education/academicHook";
 
 export const CreateWidget = () => {
-  const academic = useAcademic();
+  const { academic, setAcademic } = useAcademic();
 
-  return academic.academic.map((e) => (
+  return academic.map((e) => (
     <section className="sidebar-section" key={e.school}>
       <div className="sidebar-title-wrapper">
         <h3>{e.school}</h3>
         <button
-          onClick={() =>
-            academic.setAcademic(
-              academic.academic.filter((a) => a.school != e.school)
-            )
-          }
+          onClick={() => {
+            setAcademic(academic.filter((a) => a.school != e.school));
+            console.log(academic);
+          }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

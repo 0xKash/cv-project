@@ -8,5 +8,5 @@ export const useDate = () => {
 
   const handleEnd = (e) => setEnd(e.target.value);
 
-  return { start, handleStart, end, handleEnd };
+  return { start, handleStart, end, handleEnd, setStart, setEnd };
 };

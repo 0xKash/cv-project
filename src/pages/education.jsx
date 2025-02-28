@@ -18,8 +18,7 @@ export function Education({
   handleEnd,
   location,
   handleLocation,
-  updateState,
-  arr,
+  pushArr,
 }) {
   const [isActive, setActive] = useState(false);
   const handleDropdown = () => (isActive ? setActive(false) : setActive(true));
@@ -46,7 +45,7 @@ export function Education({
               state={location}
               handle={handleLocation}
             />
-            <button className="dropdown-save" onClick={updateState}>
+            <button className="dropdown-save" onClick={pushArr}>
               Save
             </button>
           </>

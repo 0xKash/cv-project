@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
-import { CreateInput } from "../components/common/createInput";
 import { CreateWidget } from "../components/common/createWidget";
+import { CreateInput } from "../components/common/createInput";
 import { DropdownButton } from "../components/education/dropdown";
 
 // =================================================================== //

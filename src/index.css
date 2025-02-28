@@ -90,6 +90,12 @@ input {
   justify-content: space-between;
 }
 
+.sidebar-section > p {
+  margin-top: 0.6em;
+  font-size: 0.8em;
+  color: var(--font-color);
+}
+
 .dropdown-svg {
   transform: rotate(90deg) translateX(15%);
   border: none;

@@ -5,6 +5,7 @@ import "./index.css";
 import { PersonalDetails } from "./pages/personal-details";
 import { Education } from "./pages/education";
 import { CVDocument } from "./pages/cv";
+import { CreateWidget } from "./components/common/createWidget";
 
 // HOOKS
 
@@ -58,10 +59,12 @@ function App() {
           handleStart={handleStart}
           handleEnd={handleEnd}
           handleLocation={handleLocation}
+          arr={academic}
           pushArr={() => {
             setAcademic([
               ...academic,
               {
+                id: crypto.randomUUID(),
                 school: school,
                 degree: degree,
                 start: start,
@@ -71,6 +74,16 @@ function App() {
             ]);
           }}
         />
+        {academic.map((element) => (
+          <CreateWidget
+            key={crypto.randomUUID()}
+            title={element.school}
+            subtitle={element.degree}
+            action={() =>
+              setAcademic(academic.filter((a) => a.id != element.id))
+            }
+          />
+        ))}
       </div>
       <CVDocument
         fullname={fullname}

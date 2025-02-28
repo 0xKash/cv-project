@@ -20,68 +20,49 @@ import { CreateWidget } from "./components/common/createWidget";
 // ================================================================================ //
 
 function App() {
-  const academic = useAcademic();
-  const fullName = usefullName();
-  const email = useEmail();
-  const phoneNumber = usePhoneNumber();
-  const address = useAddress();
+  const { academic, setAcademic } = useAcademic();
 
-  const school = useSchool();
-  const degree = useDegree();
-  const date = useDate();
-  const location = useLocation();
+  const { fullname, handleFullname } = usefullName();
+  const { email, handleEmail } = useEmail();
+  const { phoneNumber, handlePhoneNumber } = usePhoneNumber();
+  const { address, handleAddress } = useAddress();
+
+  const { school, handleSchool } = useSchool();
+  const { degree, handleDegree } = useDegree();
+  const { start, end, handleStart, handleEnd } = useDate();
+  const { location, handleLocation } = useLocation();
 
   return (
     <>
       <div id="sidebar">
         <PersonalDetails
-          handleFullname={fullName.handleFullname}
-          handleEmail={email.handleEmail}
-          handlePhoneNumber={phoneNumber.handlePhoneNumber}
-          handleAddress={address.handleAddress}
-          fullname={fullName.fullname}
-          email={email.email}
-          phoneNumber={phoneNumber.phoneNumber}
-          address={address.address}
+          fullname={fullname}
+          email={email}
+          phoneNumber={phoneNumber}
+          address={address}
+          handleFullname={handleFullname}
+          handleEmail={handleEmail}
+          handlePhoneNumber={handlePhoneNumber}
+          handleAddress={handleAddress}
         />
         <Education
-          school={school.school}
-          handleSchool={school.handleSchool}
-          degree={degree.degree}
-          handleDegree={degree.handleDegree}
-          start={date.start}
-          handleStart={date.handleStart}
-          end={date.end}
-          handleEnd={date.handleEnd}
-          location={location.location}
-          handleLocation={location.handleLocation}
-          arr={academic}
-          updateState={() => {
-            academic.setAcademic([
-              ...academic.academic,
-              {
-                school: school.school,
-                degree: degree.degree,
-                start: date.start,
-                end: date.end,
-                location: location.location,
-              },
-            ]);
-            school.setSchool("");
-            degree.setDegree("");
-            date.setStart("");
-            date.setEnd("");
-            location.setLocation("");
-          }}
+          school={school}
+          degree={degree}
+          start={start}
+          end={end}
+          location={location}
+          handleSchool={handleSchool}
+          handleDegree={handleDegree}
+          handleStart={handleStart}
+          handleEnd={handleEnd}
+          handleLocation={handleLocation}
         />
-        <CreateWidget arr={academic.academic} />
       </div>
       <CVDocument
-        fullname={fullName.fullname}
-        email={email.email}
-        phoneNumber={phoneNumber.phoneNumber}
-        address={address.address}
-        arr={academic.academic}
+        fullname={fullname}
+        email={email}
+        phoneNumber={phoneNumber}
+        address={address}
       />
     </>
   );

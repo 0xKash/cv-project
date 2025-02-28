@@ -3,7 +3,7 @@ import { CVEducation } from "../components/cv/cv-education";
 import { CVExperience } from "../components/cv/cv-experience";
 import { CVHeader } from "../components/cv/cv-header";
 
-export function CVDocument({ fullname, email, phoneNumber, address, arr }) {
+export function CVDocument({ fullname, email, phoneNumber, address }) {
   return (
     <article id="cv-application">
       <CVHeader
@@ -16,7 +16,7 @@ export function CVDocument({ fullname, email, phoneNumber, address, arr }) {
         <div className="cv-title">
           <h2>Education</h2>
         </div>
-        {arr.map((element, index) => (
+        {/* {arr.map((element, index) => (
           <CVEducation
             key={index}
             school={element.school}
@@ -25,7 +25,7 @@ export function CVDocument({ fullname, email, phoneNumber, address, arr }) {
             end={element.end}
             location={element.location}
           />
-        ))}
+        ))} */}
         <div className="cv-title">
           <h2>Professional Experience</h2>
         </div>

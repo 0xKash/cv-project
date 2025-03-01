@@ -1,25 +1,29 @@
-export function CVExperience() {
+export function CVExperience({
+  start,
+  end,
+  location,
+  company,
+  position,
+  description,
+}) {
   return (
     <div className="cv-content">
       <div>
         <div className="period-wrapper">
-          <p>04/2018</p>
+          <p>{start}</p>
           <p>-</p>
-          <p>02/2019</p>
+          <p>{end}</p>
         </div>
-        <p>Riyadh, Arabia Saudi</p>
+        <p>{location}</p>
       </div>
+
       <hr />
       <div>
         <p>
-          <b>Aramco</b>
+          <b>{company}</b>
         </p>
-        <p>Chemical Engineer</p>
-        <p>
-          Process engineer in a oil refinery. Created and usability tested
-          wireframes and prototypes. Produced interactive documentation for
-          quick onboarding of new researchers.
-        </p>
+        <p>{position}</p>
+        <p>{description}</p>
       </div>
     </div>
   );

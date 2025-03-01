@@ -9,6 +9,7 @@ export function CVDocument({
   phoneNumber,
   address,
   education,
+  experience,
 }) {
   return (
     <article id="cv-application">
@@ -35,7 +36,17 @@ export function CVDocument({
         <div className="cv-title">
           <h2>Professional Experience</h2>
         </div>
-        <CVExperience />
+        {experience.map((element, index) => (
+          <CVExperience
+            key={index}
+            company={element.company}
+            position={element.position}
+            start={element.start}
+            end={element.end}
+            location={element.location}
+            description={element.description}
+          />
+        ))}
       </div>
     </article>
   );

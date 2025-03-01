@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export const CreateWidget = ({ title, subtitle, action }) => {
   return (
     <section className="sidebar-section">

@@ -189,6 +189,10 @@ input {
   width: 3.5cm;
 }
 
+.info-wrapper {
+  width: auto;
+}
+
 /* MEDIA STYLE */
 
 @media (max-width: 502px) {

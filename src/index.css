@@ -3,7 +3,6 @@
 * {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
 
   --main-background-color: #242424;
   --secundary-color: #3d3d3d;
@@ -62,6 +61,12 @@ input {
   padding-left: 0.5rem;
 
   color: var(--font-color);
+}
+
+#pdf-button {
+  width: auto;
+  margin-left: auto;
+  color: beige;
 }
 
 .sidebar-section {
@@ -189,13 +194,12 @@ input {
   width: 3.5cm;
 }
 
-.info-wrapper {
-  width: auto;
+.content-wrapper {
 }
 
 /* MEDIA STYLE */
 
-@media (max-width: 502px) {
+@media (max-width: 554px) {
   #root {
     box-sizing: border-box;
     display: flex;

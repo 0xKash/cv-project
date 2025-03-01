@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 export const useDescriptionExp = () => {
-  const [descriptionExp, setDescription] = useState("");
+  const [descriptionExp, setDescriptionExp] = useState("");
 
-  const handleDescriptionExp = (e) => setDescription(e.target.value);
+  const handleDescriptionExp = (e) => setDescriptionExp(e.target.value);
 
-  return { descriptionExp, handleDescriptionExp };
+  return { descriptionExp, handleDescriptionExp, setDescriptionExp };
 };

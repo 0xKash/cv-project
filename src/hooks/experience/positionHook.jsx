@@ -5,5 +5,5 @@ export const usePositionExp = () => {
 
   const handlePositionExp = (e) => setPositionExp(e.target.value);
 
-  return { positionExp, handlePositionExp };
+  return { positionExp, handlePositionExp, setPositionExp };
 };

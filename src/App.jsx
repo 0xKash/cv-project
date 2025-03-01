@@ -39,16 +39,24 @@ function App() {
   const { phoneNumber, handlePhoneNumber } = usePhoneNumber();
   const { address, handleAddress } = useAddress();
 
-  const { school, handleSchool } = useSchool();
-  const { degree, handleDegree } = useDegree();
-  const { start, end, handleStart, handleEnd } = useDate();
-  const { location, handleLocation } = useLocation();
+  const { school, handleSchool, setSchool } = useSchool();
+  const { degree, handleDegree, setDegree } = useDegree();
+  const { start, end, handleStart, handleEnd, setStart, setEnd } = useDate();
+  const { location, handleLocation, setLocation } = useLocation();
 
-  const { companyExp, handleCompanyExp } = useCompanyExp();
-  const { positionExp, handlePositionExp } = usePositionExp();
-  const { locationExp, handleLocationExp } = useLocationExp();
-  const { startExp, endExp, handleStartExp, handleEndExp } = useDateExp();
-  const { descriptionExp, handleDescriptionExp } = useDescriptionExp();
+  const { companyExp, handleCompanyExp, setCompanyExp } = useCompanyExp();
+  const { positionExp, handlePositionExp, setPositionExp } = usePositionExp();
+  const { locationExp, handleLocationExp, setLocationExp } = useLocationExp();
+  const {
+    startExp,
+    endExp,
+    handleStartExp,
+    handleEndExp,
+    setStartExp,
+    setEndExp,
+  } = useDateExp();
+  const { descriptionExp, handleDescriptionExp, setDescriptionExp } =
+    useDescriptionExp();
 
   return (
     <>
@@ -87,6 +95,11 @@ function App() {
                 location: location,
               },
             ]);
+            setSchool("");
+            setDegree("");
+            setStart("");
+            setEnd("");
+            setLocation("");
           }}
         />
         {academic.map((element) => (
@@ -112,7 +125,7 @@ function App() {
           handleEnd={handleEndExp}
           handleLocation={handleLocationExp}
           handleDescription={handleDescriptionExp}
-          pushArr={() =>
+          pushArr={() => {
             setExperience([
               ...experience,
               {
@@ -123,8 +136,14 @@ function App() {
                 location: locationExp,
                 description: descriptionExp,
               },
-            ])
-          }
+            ]);
+            setCompanyExp("");
+            setPositionExp("");
+            setStartExp("");
+            setEndExp("");
+            setLocationExp("");
+            setDescriptionExp("");
+          }}
         />
         {experience.map((element) => (
           <CreateWidget

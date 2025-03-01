@@ -16,9 +16,8 @@ export function CVExperience({
         </div>
         <p>{location}</p>
       </div>
-
       <hr />
-      <div>
+      <div className="content-wrapper">
         <p>
           <b>{company}</b>
         </p>

@@ -5,5 +5,5 @@ export const useCompanyExp = () => {
 
   const handleCompanyExp = (e) => setCompanyExp(e.target.value);
 
-  return { companyExp, handleCompanyExp };
+  return { companyExp, handleCompanyExp, setCompanyExp };
 };
